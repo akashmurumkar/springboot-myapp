@@ -1,0 +1,106 @@
+# IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Build output
+target/
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# VS Code
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Spring Boot
+**/application-*.properties
+!**/src/main/**/application-*.properties
+**/application-*.yml
+!**/src/main/**/application-*.yml
+
+# HSQL database
+hsqldb/
+# H2 Database
+*.h2.db
+*.lock.db
+
+# Application Logs
+logs/
+
+# Spring Boot Actuator
+**/logs/
+**/log/
+**/*.log.*
+
+# Local configuration files
+*.properties
+!src/main/**/*.properties
+!src/test/**/*.properties
+
+# Local development environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Flyway migrations (uncomment if not using Flyway)
+# src/main/resources/db/migration/
+
+# Local development DB
+*.db
+*.sql
+*.sqlite
+
+# Testing
+**/surefire-reports/
+**/failsafe-reports/
+**/test-output/
+**/test-results/
+**/screenshots/
+**/reports/
+
+# Virtual machine crash logs
+hs_err_pid*
+
+# OS specific files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
