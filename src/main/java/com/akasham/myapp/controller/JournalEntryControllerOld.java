@@ -1,8 +1,6 @@
 package com.akasham.myapp.controller;
 
 import com.akasham.myapp.entity.JournalEntry;
-import com.akasham.myapp.service.JournalEntryService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -11,43 +9,41 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/journal")
-public class JournalEntryControllerV2 {
+@RequestMapping("/_journal")
+public class JournalEntryControllerOld {
 
-    // Best Practices:
-    // Controller layer to call service layer
-    // Service layer to call repository layer
-    // Repository layer to call database
-
-    @Autowired
-    private JournalEntryService journalEntryService;
+    private final Map<Long, JournalEntry> journalEntries = new HashMap<>();
 
     @GetMapping
     public List<JournalEntry> getJournalEntries() {
-        return journalEntryService.getAllEntries();
+//        return new ArrayList<>(journalEntries.values());
+        return null;
     }
 
     @PostMapping
     public JournalEntry createJournalEntry(@RequestBody JournalEntry journalEntry) {
-        journalEntryService.saveEntry(journalEntry);
-        return journalEntry;
+//        journalEntries.put(journalEntry.getId(), journalEntry);
+//        return journalEntry;
+        return null;
     }
 
     @GetMapping("/{id}")
     public JournalEntry getJournalEntry(@PathVariable Long id) {
-
+//        return journalEntries.get(id);
         return null;
     }
 
     @DeleteMapping("/{id}")
     public void deleteJournalEntry(@PathVariable Long id) {
-
+//        journalEntries.remove(id);
     }
 
     @PutMapping("/{id}")
     public JournalEntry updateJournalEntry(@PathVariable Long id, @RequestBody JournalEntry journalEntry) {
-
-        return journalEntry;
+//        journalEntry.setId(id);
+//        journalEntries.put(id, journalEntry);
+//        return journalEntry;
+        return null;
     }
 
 }

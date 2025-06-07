@@ -1,52 +1,28 @@
 package com.akasham.myapp.entity;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
-@Document(collection = "journal")
+@Document(collection = "journal_entries")
+@Data
+@NoArgsConstructor
 public class JournalEntry {
 
     // @Document is a MongoDB annotation used to mark a class as a document which is mapped to a collection in the database
     // @Id is a MongoDB annotation used to mark a field as the document's unique identifier
 
     @Id
-    private String id;
+    private ObjectId id;
+    @NonNull
     private String title;
     private String content;
-    private Date date;
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
+    private LocalDateTime createdDate;
+    private LocalDateTime updatedDate;
 
 }
