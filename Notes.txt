@@ -13,7 +13,7 @@ In MacOS:
 
 2. Connect to the cluster using the connection string
 Example:
-mongosh "mongodb+srv://cluster0.hwyayk5.mongodb.net/" --apiVersion 1 --username akashmurumkar --password QSS9gltvYV4OngrN
+mongosh "mongodb+srv://cluster0.hwyayk5.mongodb.net/" --apiVersion 1 --username <username> --password <password>
 
 In Java:
 
